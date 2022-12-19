@@ -33,7 +33,7 @@ const todos = [
     return li;
   }
   console.log(creatTodo);
-//создаем функцию - добавляем в контейнер todosConteiner наш элемент li поэтому передаем в параметры append метод creatTodo
+//2.3 создаем функцию - добавляем в контейнер todosConteiner наш элемент li поэтому передаем в параметры append метод creatTodo
 const renderTodo = (taskName) => {
     todosConteiner.append(creatTodo(taskName))
 }
@@ -43,7 +43,7 @@ const renderTodo = (taskName) => {
     renderTodo(title);
   })
   */
-// перебор элементов методом Map и передадим в него нашу функцию колбек с переменной taskName , разворачиваем массив с помощью спред оператора ...
+// 2.4 перебор элементов методом Map и передадим в него нашу функцию колбек с переменной taskName , разворачиваем массив с помощью спред оператора ...
 todosConteiner.append(...todos.map((taskName) => {
     return creatTodo(taskName);
 }));
